@@ -10,13 +10,13 @@ def get_arguments():
     parser = ArgumentParser()
     parser.add_argument('-o', '--output', dest='output',
                         help='Optional. A file path where keylogger should write captured strokes. '
-                             'If this argument was not provided, '
+                             'If this argument wasnt provided, '
                              'then keylogger will log all events in its current working directory '
                              'in the keylogger.log file')
     parser.add_argument('-l', '--limit', dest='limit',
                         help='Optional. '
-                             'Specify a limit for buttons hits to be collected before writing them in the journal. '
-                             'Default is 100.')
+                             'Specify a limit for buttons hits to be collected before writing them into the journal. '
+                             'Default is 50.')
     options = parser.parse_args()
     if not options.output:
         options.output = './keylogger.log'
